@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-11-27
+
+### Fixed
+- Name normalization no longer takes quadratic time on large graphs, so scanning big graphs stays fast.
+- CSV plan errors now name the file, and an empty CSV gets its own message.
+- The performance test measures CPU time with a 15 s budget so it is stable on shared CI machines.
+
 ## [0.1.0] - 2026-11-27
 
 ### Added

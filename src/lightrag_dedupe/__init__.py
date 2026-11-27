@@ -8,7 +8,7 @@ Unofficial tool. Public API:
 
 from __future__ import annotations
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 from .candidates import scan_graph
 from .normalize import NormResult, normalize_name
