@@ -108,7 +108,9 @@ def normalize_name(
         the ordered rule codes and the intermediate steps.
     """
     alias_map = aliases or {}
-    known = set(known_keys)
+    # Reuse a caller-provided set as is: copying it per name made large scans quadratic.
+    known = known_keys if isinstance(known_keys, (set, frozenset)) else set(known_keys)
+    alias_targets = set(alias_map.values()) if alias_map else ()
     steps: list[Step] = []
 
     text = name.strip()
@@ -136,7 +138,7 @@ def normalize_name(
         stem_key = compact(stem)
         if len(stem_key) < MIN_KEY_LENGTH:
             continue
-        if stem_key in alias_map or stem_key in alias_map.values():
+        if stem_key in alias_map or stem_key in alias_targets:
             detail = "alias"
         elif stem_key in known:
             detail = "graph"
