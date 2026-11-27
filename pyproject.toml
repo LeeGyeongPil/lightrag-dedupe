@@ -1,0 +1,61 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "lightrag-dedupe"
+version = "0.1.0"
+description = "Deterministic, reviewable duplicate-entity merge plans for LightRAG knowledge graphs (unofficial tool)."
+requires-python = ">=3.11"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "LeeGyeongPil" }]
+keywords = ["lightrag", "knowledge-graph", "entity-resolution", "deduplication", "rag", "korean"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Topic :: Text Processing :: Linguistic",
+]
+# Zero runtime dependencies on purpose: scan / explain / server apply use the standard library only.
+dependencies = []
+
+[project.optional-dependencies]
+# Needed only for `apply --rag` (Python path) and `demo`.
+lightrag = ["lightrag-hku>=1.5.8,<1.6"]
+
+[project.urls]
+Homepage = "https://github.com/LeeGyeongPil/lightrag-dedupe"
+Issues = "https://github.com/LeeGyeongPil/lightrag-dedupe/issues"
+Changelog = "https://github.com/LeeGyeongPil/lightrag-dedupe/blob/main/CHANGELOG.md"
+
+[project.scripts]
+lightrag-dedupe = "lightrag_dedupe.cli:main"
+
+[dependency-groups]
+dev = [
+  "pytest>=8",
+  "lightrag-hku==1.5.8",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/lightrag_dedupe"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"samples/sample_kg.json" = "lightrag_dedupe/samples/sample_kg.json"
+"samples/aliases.csv" = "lightrag_dedupe/samples/aliases.csv"
+
+[tool.hatch.build.targets.sdist]
+include = ["src", "samples", "tests", "scripts", "LICENSE", "README.md", "README.ko.md", "CHANGELOG.md", "pyproject.toml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
