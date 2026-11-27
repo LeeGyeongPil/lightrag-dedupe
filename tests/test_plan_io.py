@@ -124,6 +124,17 @@ def test_csv_missing_columns(tmp_path):
     with pytest.raises(UsageError) as exc:
         load_plan(p)
     assert exc.value.key == "err.plan_csv_columns"
+    # 메시지에는 실제 파일 이름이 들어간다
+    assert exc.value.params["path"] == str(p)
+
+
+def test_csv_empty_file_has_its_own_message(tmp_path):
+    p = tmp_path / "empty.csv"
+    p.write_text("", encoding="utf-8")
+    with pytest.raises(UsageError) as exc:
+        load_plan(p)
+    assert exc.value.key == "err.plan_csv_empty"
+    assert exc.value.params["path"] == str(p)
 
 
 def test_csv_group_with_single_member_is_rejected(plan_csv):

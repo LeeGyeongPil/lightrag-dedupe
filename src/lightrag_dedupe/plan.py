@@ -229,9 +229,12 @@ def _load_csv(path: Path) -> LoadedPlan:
         raise UsageError("err.not_utf8", path=str(path)) from exc
     except OSError as exc:
         raise UsageError("err.plan_invalid", path=str(path), detail=str(exc)) from exc
+    # 빈 파일은 머리글조차 없으니 "열이 없다" 대신 따로 알려 준다
+    if not fields:
+        raise UsageError("err.plan_csv_empty", path=str(path))
     missing = [c for c in ("group_id", "apply", "target", "member") if c not in fields]
     if missing:
-        raise UsageError("err.plan_csv_columns", missing=", ".join(missing))
+        raise UsageError("err.plan_csv_columns", path=str(path), missing=", ".join(missing))
     order: list[str] = []
     by_id: dict[str, list[dict[str, str]]] = {}
     for row in rows:
