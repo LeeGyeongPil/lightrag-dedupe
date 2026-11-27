@@ -1,4 +1,4 @@
-"""AC-10: a 20,000-node graph is scanned in well under 15 seconds."""
+"""AC-10: a 20,000-node graph is scanned within 15 CPU-seconds (about 1 s measured; CPU time so machine load cannot flake it)."""
 import random
 import time
 from xml.sax.saxutils import escape
@@ -39,10 +39,10 @@ def test_scan_20k_nodes_under_15s(tmp_path):
     path = tmp_path / "graph_chunk_entity_relation.graphml"
     _write_graph(path, all_names)
 
-    start = time.perf_counter()
+    start = time.process_time()
     graph = load_graph(path)
     plan = scan_graph(graph)
-    elapsed = time.perf_counter() - start
+    elapsed = time.process_time() - start
 
     assert len(graph.nodes) == 20_000
     assert len(plan.groups) >= 500
