@@ -1,0 +1,213 @@
+{
+  "format": "lightrag-dedupe/plan@1",
+  "graph_sha256": "0f4bdc888f308ae62b76cf9824fa2524ee180af5f2335ed43848e658daa4b05e",
+  "node_count": 19,
+  "options": {
+    "near": 0.6,
+    "max_review": 500,
+    "aliases": 3
+  },
+  "rule_codes": [
+    "nfkc",
+    "casefold",
+    "suffix:<x>",
+    "ko_particle:<x>",
+    "punct_space",
+    "alias",
+    "guard:too_short"
+  ],
+  "groups": [
+    {
+      "id": "G001",
+      "apply": false,
+      "target": "Apple",
+      "sources": [
+        "apple"
+      ],
+      "members": [
+        {
+          "name": "Apple",
+          "entity_type": "ORGANIZATION",
+          "degree": 0,
+          "chunks": 1,
+          "rules": [
+            "casefold"
+          ]
+        },
+        {
+          "name": "apple",
+          "entity_type": "FOOD",
+          "degree": 0,
+          "chunks": 1,
+          "rules": []
+        }
+      ],
+      "flags": [
+        "type_conflict"
+      ]
+    },
+    {
+      "id": "G002",
+      "apply": true,
+      "target": "OpenAI",
+      "sources": [
+        "OpenAI Inc.",
+        "openai",
+        "오픈AI의"
+      ],
+      "members": [
+        {
+          "name": "OpenAI",
+          "entity_type": "ORGANIZATION",
+          "degree": 1,
+          "chunks": 2,
+          "rules": [
+            "casefold"
+          ]
+        },
+        {
+          "name": "openai",
+          "entity_type": "ORGANIZATION",
+          "degree": 1,
+          "chunks": 1,
+          "rules": []
+        },
+        {
+          "name": "오픈AI의",
+          "entity_type": "ORGANIZATION",
+          "degree": 1,
+          "chunks": 1,
+          "rules": [
+            "casefold",
+            "ko_particle:의",
+            "alias"
+          ]
+        },
+        {
+          "name": "OpenAI Inc.",
+          "entity_type": "ORGANIZATION",
+          "degree": 1,
+          "chunks": 1,
+          "rules": [
+            "casefold",
+            "suffix:inc"
+          ]
+        }
+      ],
+      "flags": []
+    },
+    {
+      "id": "G003",
+      "apply": true,
+      "target": "삼성전자",
+      "sources": [
+        "Samsung Electronics Co., Ltd.",
+        "삼성전자의"
+      ],
+      "members": [
+        {
+          "name": "삼성전자",
+          "entity_type": "ORGANIZATION",
+          "degree": 1,
+          "chunks": 1,
+          "rules": []
+        },
+        {
+          "name": "삼성전자의",
+          "entity_type": "ORGANIZATION",
+          "degree": 1,
+          "chunks": 1,
+          "rules": [
+            "ko_particle:의"
+          ]
+        },
+        {
+          "name": "Samsung Electronics Co., Ltd.",
+          "entity_type": "ORGANIZATION",
+          "degree": 1,
+          "chunks": 1,
+          "rules": [
+            "casefold",
+            "suffix:ltd",
+            "suffix:co",
+            "punct_space",
+            "alias"
+          ]
+        }
+      ],
+      "flags": []
+    },
+    {
+      "id": "G004",
+      "apply": true,
+      "target": "카카오",
+      "sources": [
+        "(주)카카오",
+        "주식회사 카카오"
+      ],
+      "members": [
+        {
+          "name": "카카오",
+          "entity_type": "ORGANIZATION",
+          "degree": 1,
+          "chunks": 1,
+          "rules": []
+        },
+        {
+          "name": "(주)카카오",
+          "entity_type": "ORGANIZATION",
+          "degree": 1,
+          "chunks": 1,
+          "rules": [
+            "suffix:(주)"
+          ]
+        },
+        {
+          "name": "주식회사 카카오",
+          "entity_type": "ORGANIZATION",
+          "degree": 1,
+          "chunks": 1,
+          "rules": [
+            "suffix:주식회사"
+          ]
+        }
+      ],
+      "flags": []
+    }
+  ],
+  "review": [
+    {
+      "id": "R001",
+      "apply": false,
+      "target": "OpenAI",
+      "sources": [
+        "OpenAl"
+      ],
+      "members": [
+        {
+          "name": "OpenAI",
+          "entity_type": "ORGANIZATION",
+          "degree": 1,
+          "chunks": 2,
+          "rules": [
+            "casefold"
+          ]
+        },
+        {
+          "name": "OpenAl",
+          "entity_type": "ORGANIZATION",
+          "degree": 1,
+          "chunks": 1,
+          "rules": [
+            "casefold"
+          ]
+        }
+      ],
+      "flags": [
+        "near"
+      ],
+      "jaccard": 0.6
+    }
+  ],
+  "review_truncated": 0
+}

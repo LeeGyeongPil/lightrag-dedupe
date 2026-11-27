@@ -1,0 +1,257 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d11" for="edge" attr.name="created_at" attr.type="long" />
+  <key id="d10" for="edge" attr.name="file_path" attr.type="string" />
+  <key id="d9" for="edge" attr.name="source_id" attr.type="string" />
+  <key id="d8" for="edge" attr.name="keywords" attr.type="string" />
+  <key id="d7" for="edge" attr.name="description" attr.type="string" />
+  <key id="d6" for="edge" attr.name="weight" attr.type="double" />
+  <key id="d5" for="node" attr.name="created_at" attr.type="long" />
+  <key id="d4" for="node" attr.name="file_path" attr.type="string" />
+  <key id="d3" for="node" attr.name="source_id" attr.type="string" />
+  <key id="d2" for="node" attr.name="description" attr.type="string" />
+  <key id="d1" for="node" attr.name="entity_type" attr.type="string" />
+  <key id="d0" for="node" attr.name="entity_id" attr.type="string" />
+  <graph edgedefault="undirected">
+    <node id="OpenAI Inc.">
+      <data key="d0">OpenAI Inc.</data>
+      <data key="d1">ORGANIZATION</data>
+      <data key="d2">Company that released ChatGPT.</data>
+      <data key="d3">chunk-8c533e53586df1207abe87d65402f052</data>
+      <data key="d4">a.txt</data>
+      <data key="d5">1795739866</data>
+    </node>
+    <node id="openai">
+      <data key="d0">openai</data>
+      <data key="d1">ORGANIZATION</data>
+      <data key="d2">Lowercase mention of the lab.</data>
+      <data key="d3">chunk-8c533e53586df1207abe87d65402f052</data>
+      <data key="d4">a.txt</data>
+      <data key="d5">1795739866</data>
+    </node>
+    <node id="OpenAI">
+      <data key="d0">OpenAI</data>
+      <data key="d1">ORGANIZATION</data>
+      <data key="d2">Full-width spelling (LightRAG already unifies this one at insert time).</data>
+      <data key="d3">chunk-f2110f40b9a9546c7e9c9cd47f5504ab&lt;SEP&gt;chunk-8c533e53586df1207abe87d65402f052</data>
+      <data key="d4">b.txt</data>
+      <data key="d5">1795739866</data>
+    </node>
+    <node id="오픈AI의">
+      <data key="d0">오픈AI의</data>
+      <data key="d1">ORGANIZATION</data>
+      <data key="d2">한국어 표기에 조사가 붙은 형태.</data>
+      <data key="d3">chunk-f2110f40b9a9546c7e9c9cd47f5504ab</data>
+      <data key="d4">b.txt</data>
+      <data key="d5">1795739866</data>
+    </node>
+    <node id="OpenAl">
+      <data key="d0">OpenAl</data>
+      <data key="d1">ORGANIZATION</data>
+      <data key="d2">Typo: lowercase L instead of capital I.</data>
+      <data key="d3">chunk-b600fae065f00ca5042b77011f605d8c</data>
+      <data key="d4">e.txt</data>
+      <data key="d5">1795739866</data>
+    </node>
+    <node id="Sam Altman">
+      <data key="d0">Sam Altman</data>
+      <data key="d1">PERSON</data>
+      <data key="d2">Chief executive.</data>
+      <data key="d3">chunk-8c533e53586df1207abe87d65402f052&lt;SEP&gt;chunk-f2110f40b9a9546c7e9c9cd47f5504ab</data>
+      <data key="d4">a.txt</data>
+      <data key="d5">1795739866</data>
+    </node>
+    <node id="ChatGPT">
+      <data key="d0">ChatGPT</data>
+      <data key="d1">PRODUCT</data>
+      <data key="d2">Chatbot.</data>
+      <data key="d3">chunk-8c533e53586df1207abe87d65402f052&lt;SEP&gt;chunk-b600fae065f00ca5042b77011f605d8c</data>
+      <data key="d4">a.txt</data>
+      <data key="d5">1795739866</data>
+    </node>
+    <node id="삼성전자">
+      <data key="d0">삼성전자</data>
+      <data key="d1">ORGANIZATION</data>
+      <data key="d2">한국의 전자 기업.</data>
+      <data key="d3">chunk-85c163c96d5b06dc518ffadcbb4038eb</data>
+      <data key="d4">c.txt</data>
+      <data key="d5">1795739866</data>
+    </node>
+    <node id="삼성전자의">
+      <data key="d0">삼성전자의</data>
+      <data key="d1">ORGANIZATION</data>
+      <data key="d2">조사가 붙은 표기.</data>
+      <data key="d3">chunk-85c163c96d5b06dc518ffadcbb4038eb</data>
+      <data key="d4">c.txt</data>
+      <data key="d5">1795739866</data>
+    </node>
+    <node id="Samsung Electronics Co., Ltd.">
+      <data key="d0">Samsung Electronics Co., Ltd.</data>
+      <data key="d1">ORGANIZATION</data>
+      <data key="d2">Korean electronics maker (English form).</data>
+      <data key="d3">chunk-85c163c96d5b06dc518ffadcbb4038eb</data>
+      <data key="d4">c.txt</data>
+      <data key="d5">1795739866</data>
+    </node>
+    <node id="HBM">
+      <data key="d0">HBM</data>
+      <data key="d1">PRODUCT</data>
+      <data key="d2">High-bandwidth memory.</data>
+      <data key="d3">chunk-85c163c96d5b06dc518ffadcbb4038eb</data>
+      <data key="d4">c.txt</data>
+      <data key="d5">1795739866</data>
+    </node>
+    <node id="(주)카카오">
+      <data key="d0">(주)카카오</data>
+      <data key="d1">ORGANIZATION</data>
+      <data key="d2">법인 표기 (주).</data>
+      <data key="d3">chunk-53793251bccc6b9620f919fe2d803d15</data>
+      <data key="d4">d.txt</data>
+      <data key="d5">1795739866</data>
+    </node>
+    <node id="주식회사 카카오">
+      <data key="d0">주식회사 카카오</data>
+      <data key="d1">ORGANIZATION</data>
+      <data key="d2">법인 표기 주식회사.</data>
+      <data key="d3">chunk-53793251bccc6b9620f919fe2d803d15</data>
+      <data key="d4">d.txt</data>
+      <data key="d5">1795739866</data>
+    </node>
+    <node id="카카오">
+      <data key="d0">카카오</data>
+      <data key="d1">ORGANIZATION</data>
+      <data key="d2">메신저 기업.</data>
+      <data key="d3">chunk-53793251bccc6b9620f919fe2d803d15</data>
+      <data key="d4">d.txt</data>
+      <data key="d5">1795739866</data>
+    </node>
+    <node id="카카오톡">
+      <data key="d0">카카오톡</data>
+      <data key="d1">PRODUCT</data>
+      <data key="d2">메신저 앱.</data>
+      <data key="d3">chunk-53793251bccc6b9620f919fe2d803d15</data>
+      <data key="d4">d.txt</data>
+      <data key="d5">1795739866</data>
+    </node>
+    <node id="마이크로">
+      <data key="d0">마이크로</data>
+      <data key="d1">TECHNOLOGY</data>
+      <data key="d2">Prefix meaning small; no 마이크 node exists, so it must stay.</data>
+      <data key="d3">chunk-b600fae065f00ca5042b77011f605d8c</data>
+      <data key="d4">e.txt</data>
+      <data key="d5">1795739866</data>
+    </node>
+    <node id="Co">
+      <data key="d0">Co</data>
+      <data key="d1">ORGANIZATION</data>
+      <data key="d2">A name that is only a corporate suffix.</data>
+      <data key="d3">chunk-b600fae065f00ca5042b77011f605d8c</data>
+      <data key="d4">e.txt</data>
+      <data key="d5">1795739866</data>
+    </node>
+    <node id="Apple">
+      <data key="d0">Apple</data>
+      <data key="d1">ORGANIZATION</data>
+      <data key="d2">Technology company.</data>
+      <data key="d3">chunk-b600fae065f00ca5042b77011f605d8c</data>
+      <data key="d4">e.txt</data>
+      <data key="d5">1795739866</data>
+    </node>
+    <node id="apple">
+      <data key="d0">apple</data>
+      <data key="d1">FOOD</data>
+      <data key="d2">Fruit.</data>
+      <data key="d3">chunk-b600fae065f00ca5042b77011f605d8c</data>
+      <data key="d4">e.txt</data>
+      <data key="d5">1795739866</data>
+    </node>
+    <edge source="OpenAI Inc." target="ChatGPT">
+      <data key="d6">1.0</data>
+      <data key="d7">released</data>
+      <data key="d8">release</data>
+      <data key="d9">chunk-8c533e53586df1207abe87d65402f052</data>
+      <data key="d10">a.txt</data>
+      <data key="d11">1795739866</data>
+    </edge>
+    <edge source="openai" target="Sam Altman">
+      <data key="d6">1.0</data>
+      <data key="d7">leads</data>
+      <data key="d8">lead</data>
+      <data key="d9">chunk-8c533e53586df1207abe87d65402f052</data>
+      <data key="d10">a.txt</data>
+      <data key="d11">1795739866</data>
+    </edge>
+    <edge source="OpenAI" target="Sam Altman">
+      <data key="d6">1.0</data>
+      <data key="d7">co-founded</data>
+      <data key="d8">founder</data>
+      <data key="d9">chunk-8c533e53586df1207abe87d65402f052</data>
+      <data key="d10">a.txt</data>
+      <data key="d11">1795739866</data>
+    </edge>
+    <edge source="오픈AI의" target="Sam Altman">
+      <data key="d6">1.0</data>
+      <data key="d7">CEO of</data>
+      <data key="d8">ceo</data>
+      <data key="d9">chunk-f2110f40b9a9546c7e9c9cd47f5504ab</data>
+      <data key="d10">b.txt</data>
+      <data key="d11">1795739866</data>
+    </edge>
+    <edge source="OpenAl" target="ChatGPT">
+      <data key="d6">1.0</data>
+      <data key="d7">typo mention</data>
+      <data key="d8">release</data>
+      <data key="d9">chunk-b600fae065f00ca5042b77011f605d8c</data>
+      <data key="d10">e.txt</data>
+      <data key="d11">1795739866</data>
+    </edge>
+    <edge source="삼성전자" target="HBM">
+      <data key="d6">1.0</data>
+      <data key="d7">produces</data>
+      <data key="d8">produce</data>
+      <data key="d9">chunk-85c163c96d5b06dc518ffadcbb4038eb</data>
+      <data key="d10">c.txt</data>
+      <data key="d11">1795739866</data>
+    </edge>
+    <edge source="삼성전자의" target="HBM">
+      <data key="d6">1.0</data>
+      <data key="d7">produces</data>
+      <data key="d8">produce</data>
+      <data key="d9">chunk-85c163c96d5b06dc518ffadcbb4038eb</data>
+      <data key="d10">c.txt</data>
+      <data key="d11">1795739866</data>
+    </edge>
+    <edge source="Samsung Electronics Co., Ltd." target="HBM">
+      <data key="d6">1.0</data>
+      <data key="d7">produces</data>
+      <data key="d8">produce</data>
+      <data key="d9">chunk-85c163c96d5b06dc518ffadcbb4038eb</data>
+      <data key="d10">c.txt</data>
+      <data key="d11">1795739866</data>
+    </edge>
+    <edge source="(주)카카오" target="카카오톡">
+      <data key="d6">1.0</data>
+      <data key="d7">operates</data>
+      <data key="d8">operate</data>
+      <data key="d9">chunk-53793251bccc6b9620f919fe2d803d15</data>
+      <data key="d10">d.txt</data>
+      <data key="d11">1795739866</data>
+    </edge>
+    <edge source="주식회사 카카오" target="카카오톡">
+      <data key="d6">1.0</data>
+      <data key="d7">operates</data>
+      <data key="d8">operate</data>
+      <data key="d9">chunk-53793251bccc6b9620f919fe2d803d15</data>
+      <data key="d10">d.txt</data>
+      <data key="d11">1795739866</data>
+    </edge>
+    <edge source="카카오" target="카카오톡">
+      <data key="d6">1.0</data>
+      <data key="d7">operates</data>
+      <data key="d8">operate</data>
+      <data key="d9">chunk-53793251bccc6b9620f919fe2d803d15</data>
+      <data key="d10">d.txt</data>
+      <data key="d11">1795739866</data>
+    </edge>
+  </graph>
+</graphml>

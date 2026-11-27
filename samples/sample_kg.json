@@ -1,0 +1,272 @@
+{
+  "chunks": [
+    {
+      "content": "OpenAI Inc. released ChatGPT. Sam Altman leads openai and co-founded OpenAI.",
+      "source_id": "c1",
+      "file_path": "a.txt"
+    },
+    {
+      "content": "오픈AI의 CEO 는 Sam Altman 이다.",
+      "source_id": "c2",
+      "file_path": "b.txt"
+    },
+    {
+      "content": "삼성전자는 HBM 메모리를 만든다. Samsung Electronics Co., Ltd. also makes HBM. 삼성전자의 HBM 라인.",
+      "source_id": "c3",
+      "file_path": "c.txt"
+    },
+    {
+      "content": "(주)카카오가 카카오톡을 운영한다. 주식회사 카카오와 카카오는 같은 회사다.",
+      "source_id": "c4",
+      "file_path": "d.txt"
+    },
+    {
+      "content": "Typos and traps: OpenAl, Co, Apple the company, apple the fruit, 마이크로.",
+      "source_id": "c5",
+      "file_path": "e.txt"
+    }
+  ],
+  "entities": [
+    {
+      "entity_name": "OpenAI",
+      "entity_type": "ORGANIZATION",
+      "description": "AI research lab.",
+      "source_id": "c1",
+      "file_path": "a.txt"
+    },
+    {
+      "entity_name": "OpenAI Inc.",
+      "entity_type": "ORGANIZATION",
+      "description": "Company that released ChatGPT.",
+      "source_id": "c1",
+      "file_path": "a.txt"
+    },
+    {
+      "entity_name": "openai",
+      "entity_type": "ORGANIZATION",
+      "description": "Lowercase mention of the lab.",
+      "source_id": "c1",
+      "file_path": "a.txt"
+    },
+    {
+      "entity_name": "ＯｐｅｎＡＩ",
+      "entity_type": "ORGANIZATION",
+      "description": "Full-width spelling (LightRAG already unifies this one at insert time).",
+      "source_id": "c2",
+      "file_path": "b.txt"
+    },
+    {
+      "entity_name": "오픈AI의",
+      "entity_type": "ORGANIZATION",
+      "description": "한국어 표기에 조사가 붙은 형태.",
+      "source_id": "c2",
+      "file_path": "b.txt"
+    },
+    {
+      "entity_name": "OpenAl",
+      "entity_type": "ORGANIZATION",
+      "description": "Typo: lowercase L instead of capital I.",
+      "source_id": "c5",
+      "file_path": "e.txt"
+    },
+    {
+      "entity_name": "Sam Altman",
+      "entity_type": "PERSON",
+      "description": "Chief executive.",
+      "source_id": "c1",
+      "file_path": "a.txt"
+    },
+    {
+      "entity_name": "ChatGPT",
+      "entity_type": "PRODUCT",
+      "description": "Chatbot.",
+      "source_id": "c1",
+      "file_path": "a.txt"
+    },
+    {
+      "entity_name": "삼성전자",
+      "entity_type": "ORGANIZATION",
+      "description": "한국의 전자 기업.",
+      "source_id": "c3",
+      "file_path": "c.txt"
+    },
+    {
+      "entity_name": "삼성전자의",
+      "entity_type": "ORGANIZATION",
+      "description": "조사가 붙은 표기.",
+      "source_id": "c3",
+      "file_path": "c.txt"
+    },
+    {
+      "entity_name": "Samsung Electronics Co., Ltd.",
+      "entity_type": "ORGANIZATION",
+      "description": "Korean electronics maker (English form).",
+      "source_id": "c3",
+      "file_path": "c.txt"
+    },
+    {
+      "entity_name": "HBM",
+      "entity_type": "PRODUCT",
+      "description": "High-bandwidth memory.",
+      "source_id": "c3",
+      "file_path": "c.txt"
+    },
+    {
+      "entity_name": "(주)카카오",
+      "entity_type": "ORGANIZATION",
+      "description": "법인 표기 (주).",
+      "source_id": "c4",
+      "file_path": "d.txt"
+    },
+    {
+      "entity_name": "주식회사 카카오",
+      "entity_type": "ORGANIZATION",
+      "description": "법인 표기 주식회사.",
+      "source_id": "c4",
+      "file_path": "d.txt"
+    },
+    {
+      "entity_name": "카카오",
+      "entity_type": "ORGANIZATION",
+      "description": "메신저 기업.",
+      "source_id": "c4",
+      "file_path": "d.txt"
+    },
+    {
+      "entity_name": "카카오톡",
+      "entity_type": "PRODUCT",
+      "description": "메신저 앱.",
+      "source_id": "c4",
+      "file_path": "d.txt"
+    },
+    {
+      "entity_name": "마이크로",
+      "entity_type": "TECHNOLOGY",
+      "description": "Prefix meaning small; no 마이크 node exists, so it must stay.",
+      "source_id": "c5",
+      "file_path": "e.txt"
+    },
+    {
+      "entity_name": "Co",
+      "entity_type": "ORGANIZATION",
+      "description": "A name that is only a corporate suffix.",
+      "source_id": "c5",
+      "file_path": "e.txt"
+    },
+    {
+      "entity_name": "Apple",
+      "entity_type": "ORGANIZATION",
+      "description": "Technology company.",
+      "source_id": "c5",
+      "file_path": "e.txt"
+    },
+    {
+      "entity_name": "apple",
+      "entity_type": "FOOD",
+      "description": "Fruit.",
+      "source_id": "c5",
+      "file_path": "e.txt"
+    }
+  ],
+  "relationships": [
+    {
+      "src_id": "OpenAI Inc.",
+      "tgt_id": "ChatGPT",
+      "description": "released",
+      "keywords": "release",
+      "weight": 1.0,
+      "source_id": "c1",
+      "file_path": "a.txt"
+    },
+    {
+      "src_id": "Sam Altman",
+      "tgt_id": "openai",
+      "description": "leads",
+      "keywords": "lead",
+      "weight": 1.0,
+      "source_id": "c1",
+      "file_path": "a.txt"
+    },
+    {
+      "src_id": "Sam Altman",
+      "tgt_id": "오픈AI의",
+      "description": "CEO of",
+      "keywords": "ceo",
+      "weight": 1.0,
+      "source_id": "c2",
+      "file_path": "b.txt"
+    },
+    {
+      "src_id": "Sam Altman",
+      "tgt_id": "OpenAI",
+      "description": "co-founded",
+      "keywords": "founder",
+      "weight": 1.0,
+      "source_id": "c1",
+      "file_path": "a.txt"
+    },
+    {
+      "src_id": "OpenAl",
+      "tgt_id": "ChatGPT",
+      "description": "typo mention",
+      "keywords": "release",
+      "weight": 1.0,
+      "source_id": "c5",
+      "file_path": "e.txt"
+    },
+    {
+      "src_id": "삼성전자",
+      "tgt_id": "HBM",
+      "description": "produces",
+      "keywords": "produce",
+      "weight": 1.0,
+      "source_id": "c3",
+      "file_path": "c.txt"
+    },
+    {
+      "src_id": "Samsung Electronics Co., Ltd.",
+      "tgt_id": "HBM",
+      "description": "produces",
+      "keywords": "produce",
+      "weight": 1.0,
+      "source_id": "c3",
+      "file_path": "c.txt"
+    },
+    {
+      "src_id": "삼성전자의",
+      "tgt_id": "HBM",
+      "description": "produces",
+      "keywords": "produce",
+      "weight": 1.0,
+      "source_id": "c3",
+      "file_path": "c.txt"
+    },
+    {
+      "src_id": "(주)카카오",
+      "tgt_id": "카카오톡",
+      "description": "operates",
+      "keywords": "operate",
+      "weight": 1.0,
+      "source_id": "c4",
+      "file_path": "d.txt"
+    },
+    {
+      "src_id": "주식회사 카카오",
+      "tgt_id": "카카오톡",
+      "description": "operates",
+      "keywords": "operate",
+      "weight": 1.0,
+      "source_id": "c4",
+      "file_path": "d.txt"
+    },
+    {
+      "src_id": "카카오",
+      "tgt_id": "카카오톡",
+      "description": "operates",
+      "keywords": "operate",
+      "weight": 1.0,
+      "source_id": "c4",
+      "file_path": "d.txt"
+    }
+  ]
+}
